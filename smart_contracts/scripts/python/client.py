@@ -3,7 +3,7 @@ from web3 import Web3
 from eth_account import Account
 
 # === 1. Carregar chaves da conta e URL do nó ===
-with open("../keys.json") as f:
+with open("smart_contracts/scripts/keys.json") as f:
     keys = json.load(f)
 
 rpc_url = keys['besu']['rpcnode']['url']
@@ -15,10 +15,10 @@ w3 = Web3(Web3.HTTPProvider(rpc_url))
 assert w3.is_connected(), "Erro: Não conectado ao nó Ethereum"
 
 # === 3. Carregar ABI e bytecode do contrato ===
-with open("../../contracts/SimpleStorage.json") as f:
+with open("smart_contracts/contracts/SimpleStorage.json") as f:
     contract_json = json.load(f)
-    abi = contract_json["abi"]
-    bytecode = contract_json['evm']["bytecode"]['object']
+    abi = contract_json['contracts']['smart_contracts/contracts/SimpleStorage.sol']['SimpleStorage']["abi"]
+    bytecode = contract_json['contracts']['smart_contracts/contracts/SimpleStorage.sol']['SimpleStorage']['evm']["bytecode"]['object']
 
 # === 4. Criar contrato a partir do ABI e bytecode ===
 SimpleStorage = w3.eth.contract(abi=abi, bytecode=bytecode)
