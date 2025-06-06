@@ -1,0 +1,26 @@
+{
+    "projeto": {
+      "nome": "Monitoramento Ambiental",
+      "codigo": "S",
+      "ativo": true,
+      "orcamento": 150000.75,
+      "numero_de_sensores": 42,
+      "precisao_sensor": 0.98,
+      "documentos": [
+        "relatorio_final.pdf",
+        "mapa_area.kmz",
+        "dados_coleta.xlsx"
+      ],
+      "localizacao": {
+        "latitude": -19.225,
+        "longitude": -43.591
+      },
+      "area_monitorada": [
+        {"latitude": -19.225, "longitude": -43.591},
+        {"latitude": -19.226, "longitude": -43.592},
+        {"latitude": -19.227, "longitude": -43.593},
+        {"latitude": -19.225, "longitude": -43.591}
+      ],
+      "descricao": "Projeto piloto para monitoramento da biodiversidade na região da Serra do Cipó, utilizando sensores IoT e imagens de satélite para análise de dados ambientais."
+    }
+  }

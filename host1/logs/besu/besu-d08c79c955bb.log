@@ -1,0 +1,38 @@
+{"timestamp":"2025-06-06T12:49:09,107","container":"d08c79c955bb","level":"INFO","thread":"main","class":"Besu","message":"Starting Besu","throwable":""}
+{"timestamp":"2025-06-06T12:49:10,020","container":"d08c79c955bb","level":"WARN","thread":"main","class":"Besu","message":"--min-gas-price has been ignored because --miner-enabled was not defined on the command line.","throwable":""}
+{"timestamp":"2025-06-06T12:49:12,045","container":"d08c79c955bb","level":"INFO","thread":"main","class":"Besu","message":"
+####################################################################################################
+#                                                                                                  #
+# Besu version 23.4.1                                                                              #
+#                                                                                                  #
+# Configuration:                                                                                   #
+# Network: Custom genesis file specified                                                           #
+# Network Id: 1337                                                                                 #
+# Data storage: Forest                                                                             #
+# Sync mode: Full                                                                                  #
+# RPC HTTP APIs: EEA,WEB3,ETH,NET,TRACE,DEBUG,ADMIN,TXPOOL,PRIV,PERM,QBFT                          #
+# RPC HTTP port: 8545                                                                              #
+#                                                                                                  #
+# Host:                                                                                            #
+# Java: openjdk-java-17                                                                            #
+# Maximum heap size: 1.74 GB                                                                       #
+# OS: linux-x86_64                                                                                 #
+# glibc: 2.35                                                                                      #
+# jemalloc: 5.2.1-0-gea6b3e973b477b8061e0076bb257dbd7f3faa756                                      #
+# Total memory: 6.95 GB                                                                            #
+# CPU cores: 4                                                                                     #
+#                                                                                                  #
+####################################################################################################","throwable":""}
+{"timestamp":"2025-06-06T12:49:12,045","container":"d08c79c955bb","level":"INFO","thread":"main","class":"Besu","message":"Connecting to 8 static nodes.","throwable":""}
+{"timestamp":"2025-06-06T12:49:12,045","container":"d08c79c955bb","level":"INFO","thread":"main","class":"Besu","message":"Security Module: localfile","throwable":""}
+{"timestamp":"2025-06-06T12:49:12,212","container":"d08c79c955bb","level":"INFO","thread":"main","class":"Besu","message":"Using the native implementation of alt bn128","throwable":""}
+{"timestamp":"2025-06-06T12:49:12,324","container":"d08c79c955bb","level":"INFO","thread":"main","class":"Besu","message":"Using the native implementation of modexp","throwable":""}
+{"timestamp":"2025-06-06T12:49:12,325","container":"d08c79c955bb","level":"INFO","thread":"main","class":"Besu","message":"Using the native implementation of the signature algorithm","throwable":""}
+{"timestamp":"2025-06-06T12:49:12,329","container":"d08c79c955bb","level":"INFO","thread":"main","class":"Besu","message":"Using the native implementation of the blake2bf algorithm","throwable":""}
+{"timestamp":"2025-06-06T12:49:12,349","container":"d08c79c955bb","level":"INFO","thread":"main","class":"RocksDBKeyValueStorageFactory","message":"No existing database detected at /opt/besu/data. Using version 1","throwable":""}
+{"timestamp":"2025-06-06T12:49:15,318","container":"d08c79c955bb","level":"INFO","thread":"main","class":"KeyPairUtil","message":"Loaded public key 0x8208a3f344695d44e9cf2c023683cbea7b9343e2f70a5e804bd2c93858e945f8f91439eef96a4ab6c47ff06637d6fbe6472f96de1655a1bee57ea896654f3a22 from /opt/besu/keys/nodekey","throwable":""}
+{"timestamp":"2025-06-06T12:49:15,359","container":"d08c79c955bb","level":"WARN","thread":"main","class":"Besu","message":"Privacy is disabled. Cannot use EEA/PRIV API methods when not using Privacy.","throwable":""}
+{"timestamp":"2025-06-06T12:49:15,996","container":"d08c79c955bb","level":"INFO","thread":"main","class":"ProtocolScheduleBuilder","message":"Protocol schedule created with milestones: [GrayGlacier: 0]","throwable":""}
+{"timestamp":"2025-06-06T12:49:16,212","container":"d08c79c955bb","level":"INFO","thread":"main","class":"TransactionPoolFactory","message":"Enabling transaction pool","throwable":""}
+{"timestamp":"2025-06-06T12:49:16,239","container":"d08c79c955bb","level":"INFO","thread":"main","class":"BesuControllerBuilder","message":"TTD difficulty is not present, creating initial sync phase for PoW","throwable":""}
+{"timestamp":"2025-06-06T12:49:16,408","container":"d08c79c955bb","level":"INFO","thread":"main","class":"RunnerBuilder","message":"Detecting NAT service.","throwable":""}

@@ -1,0 +1,44 @@
+{
+  "algorithm": "qbft",
+  "nodes": [
+    {
+      "name": "rpcnode",
+      "client": "besu",
+      "rpcUrl": "http://rpcnode:8545",
+      "privateTxUrl": ""
+    },
+    {
+      "name": "validator1",
+      "client": "besu",
+      "rpcUrl": "http://validator1:8545",
+      "privateTxUrl": ""
+    },
+    {
+      "name": "validator2",
+      "client": "besu",
+      "rpcUrl": "http://validator2:8545",
+      "privateTxUrl": ""
+    },
+    {
+      "name": "validator3",
+      "client": "besu",
+      "rpcUrl": "http://validator3:8545",
+      "privateTxUrl": ""
+    },
+    {
+      "name": "validator4",
+      "client": "besu",
+      "rpcUrl": "http://validator4:8545",
+      "privateTxUrl": ""
+    },
+    {
+      "name": "member1",
+      "client": "besu",
+      "rpcUrl": "http://member1besu:8545",
+      "privateTxUrl": "http://member1tessera:9080",
+      "privateKey": "0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63",
+      "accountAddress": "0xfe3b557e8fb62b89f4916b721be55ceb828dbd73"
+    }
+  ]
+}
+ 
