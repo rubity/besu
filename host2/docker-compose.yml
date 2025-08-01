@@ -14,13 +14,32 @@ x-besu-def:
       /opt/besu/bin/besu \
       --config-file=/config/config.toml \
       --min-gas-price=0 \
-      --p2p-host=10.26.108.63 \
+      --p2p-host=10.0.0.203 \
       --rpc-http-host=0.0.0.0 \
       --host-allowlist="*" \
       --rpc-http-api=EEA,WEB3,ETH,NET,TRACE,DEBUG,ADMIN,TXPOOL,PRIV,PERM,${BESU_CONS_ALGO:-QBFT} \
       --rpc-ws-api=EEA,WEB3,ETH,NET,TRACE,DEBUG,ADMIN,TXPOOL,PRIV,PERM,${BESU_CONS_ALGO:-QBFT}
 
 services:
+
+  validator2:
+    << : *besu-def
+    ports:
+      - 21002:8545/tcp
+      - 30304:30303/tcp
+      - 30304:30303/udp
+      - 9545
+    environment:
+      - OTEL_RESOURCE_ATTRIBUTES=service.name=validator2,service.version=${BESU_VERSION:-latest}
+    labels:
+      - "consensus=besu"
+    volumes:
+      - ./config/besu/:/config
+      - ./config/nodes/validator2:/opt/besu/keys
+      - ./logs/besu:/tmp/besu
+    networks:
+      quorum-dev-quickstart:
+        ipv4_address: 172.16.239.12
 
   validator3:
     << : *besu-def

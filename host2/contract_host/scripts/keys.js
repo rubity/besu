@@ -13,8 +13,8 @@ module.exports = {
   besu: {
     rpcnode: {
       name: "rpcnode",
-      url: "http://127.0.0.1:8545",
-      wsUrl: "ws://127.0.0.1:8546",
+      url: "http://10.26.106.105:8545",
+      wsUrl: "ws://10.26.106.105:8546",
       nodekey:
         "0e93a540518eeb673d94fb496b746008ab56605463cb9212493997f5755124d1",
       accountAddress: "c9c913c8c3c1cd416d80a0abf475db2062f161f6",
@@ -23,9 +23,9 @@ module.exports = {
     },
     member1: {
       name: "member1",
-      url: "http://127.0.0.1:20000",
-      wsUrl: "ws://127.0.0.1:20001",
-      privateUrl: "http://127.0.0.1:9081",
+      url: "http://10.26.106.105:20000",
+      wsUrl: "ws://10.26.106.105:20001",
+      privateUrl: "http://10.26.106.105:9081",
       nodekey:
         "0xb9a4bd1539c15bcc83fa9078fe89200b6e9e802ae992f13cd83c853f16e8bed4",
       accountAddress: "0xf0e2db6c8dc6c681bb5d6ad121a107f300e9b2b5",

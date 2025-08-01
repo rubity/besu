@@ -13,17 +13,17 @@
   "besu": {
     "rpcnode": {
       "name": "rpcnode",
-      "url": "http://10.26.107.75:18545",
-      "wsUrl": "ws://10.26.107.75:8546",
+      "url": "http://10.0.0.77:8545",
+      "wsUrl": "ws://10.0.0.77:8546",
       "nodekey": "0e93a540518eeb673d94fb496b746008ab56605463cb9212493997f5755124d1",
       "accountAddress": "c9c913c8c3c1cd416d80a0abf475db2062f161f6",
       "accountPrivateKey": "0x60bbe10a196a4e71451c0f6e9ec9beab454c2a5ac0542aa5b8b733ff5719fec3"
     },
     "member1": {
       "name": "member1",
-      "url": "http://10.26.107.75:20000",
-      "wsUrl": "ws://10.26.107.75:20001",
-      "privateUrl": "http://127.0.0.1:9081",
+      "url": "http://10.0.0.77:20000",
+      "wsUrl": "ws://10.0.0.77:20001",
+      "privateUrl": "http://10.26.106.105:9081",
       "nodekey": "0xb9a4bd1539c15bcc83fa9078fe89200b6e9e802ae992f13cd83c853f16e8bed4",
       "accountAddress": "0xf0e2db6c8dc6c681bb5d6ad121a107f300e9b2b5",
       "accountPrivateKey": "8bbbb1b345af56b560a5b20bd4b0ed1cd8cc9958a16262bc75118453cb546df7"

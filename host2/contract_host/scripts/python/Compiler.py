@@ -1,36 +1,52 @@
-import json
 from solcx import compile_standard, install_solc
+import json, os
 
-# Instale o compilador Solidity 0.8.20 (apenas uma vez)
-install_solc("0.8.20")
+# Instala o compilador solc 0.8.20, se ainda não estiver instalado
+install_solc('0.8.20')
 
-with open("/home/augusto/besu/smart_contracts/contracts/ecdsa/ecdsa_signature.sol", "r") as file:
-    source_code = file.read()
+# Caminho para o contrato
+solidity_file = "../../contracts/Counter.sol"
+output_file = "../../contracts/Counter.json"
 
-compiled = compile_standard(
-    {
-        "language": "Solidity",
-        "sources": {
-            "ecdsa.sol": {
-                "content": source_code
-            }
-        },
-        "settings": {
-            "outputSelection": {
-                "*": {
-                    "*": ["abi", "metadata", "evm.bytecode", "evm.sourceMap"]
-                }
-            },
-            "remappings": [
-                "@openzeppelin/=/home/augusto/besu/smart_contracts/node_modules/@openzeppelin/contracts/"
-            ]
+
+# Caminho absoluto da raiz do projeto
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
+
+# Ler o código do contrato
+with open(solidity_file, "r") as f:
+    source_code = f.read()
+
+# Compilar com viaIR ativado
+compiled = compile_standard({
+    "language": "Solidity",
+    "sources": {
+        solidity_file: {
+            "content": source_code
         }
     },
-    solc_version="0.8.20",
+    "settings": {
+        "optimizer": {
+            "enabled": False,
+            "runs": 200
+        },
+        "viaIR": False,
+        "remappings": [
+            "@openzeppelin/=" + os.path.join(project_root, "node_modules/@openzeppelin/contracts/")
+        ],
+        "outputSelection": {
+            "*": {
+                "*": ["abi", "evm.bytecode", "evm.sourceMap"]
+            }
+        }
+    }
+}, 
+solc_version="0.8.20",
+allow_paths=project_root
 )
 
-# Salva em um arquivo para facilitar
-with open("/home/augusto/besu/smart_contracts/contracts/ecdsa/ecdsa_signature.json", "w") as f:
+# Salvar resultado no JSON
+with open(output_file, "w") as f:
     json.dump(compiled, f, indent=2)
 
-print("✅ Compilação concluída com sucesso!")
+print(f"Contrato compilado com sucesso com viaIR! ABI e bytecode salvos em {output_file}")
+

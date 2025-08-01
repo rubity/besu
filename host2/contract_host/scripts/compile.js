@@ -2,6 +2,8 @@ const path = require('path');
 const fs = require('fs-extra');
 const solc = require('solc');
 
+
+
 const contractsPath = path.resolve(__dirname, '../', 'contracts');
 
 function buildSources() {

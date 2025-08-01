@@ -47,7 +47,25 @@ print("Contrato implantado em:", contract_address)
 contract = w3.eth.contract(address=contract_address, abi=abi)
 
 # === 7. Preparar mensagem, nonce e assinar ===
-dado = "temperatura=28C"
+dado = """{
+  "projeto": {
+    "json_version": "0.0.1",
+    "proj_id": "7563458",
+    "proj_nome": "Monitoramento Ambiental - Serra do Cipó",
+    "cliente_id": "0896O",
+    "cliente_nome": "Instituto Verde",
+    "prod_nome": "Plano de Trabalho",
+    "prod_id":"547563",
+    "responsavel_nome": "Dra. Ana Silva",
+    "responsavel_id": "574359",
+    "arquivo_zip_ipfs": {
+      "ipfs_hash": "QmX1y2Z3AbCdEfG...",
+      "ipfs_link": "https://gateway.pinata.cloud/ipfs/QmX1y2Z3AbCdEfG...",
+      "data_upload": "2025-06-10T14:30:00Z"
+    }
+  }
+}"""
+
 nonce = 123
 endereco_contrato = contract_address
 
@@ -75,5 +93,6 @@ signed_tx2 = w3.eth.account.sign_transaction(tx2, private_key)
 tx_hash2 = w3.eth.send_raw_transaction(signed_tx2.raw_transaction)
 print("Transação registrar() enviada:", tx_hash2.hex())
 
-w3.eth.wait_for_transaction_receipt(tx_hash2)
+receipt = w3.eth.wait_for_transaction_receipt(tx_hash2)
+print(receipt)
 print("✅ Transação confirmada.")
