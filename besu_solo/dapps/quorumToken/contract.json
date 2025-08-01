@@ -1,0 +1,14 @@
+{
+  "network": "quickstart",
+  "contract": {
+    "address": "0x9B8397f1B0FEcD3a1a40CdD5E8221Fa461898517",
+    "signerAddress": "0xFE3B557E8Fb62b89F4916B721be55cEb828dBd73",
+    "abi": [
+      "event TripStored(uint256 tripId, address tripOwner, string distance, uint256 startTime, string startLocation, uint256 timestamp)",
+      "function getTrip(uint256 _tripId) view returns (address tripOwner, string startLocation, string endLocation, string distance, string avgRPM, string avgSpeed, string avgEngLoad, uint256 startTime, uint256 endTime, uint256 timestamp)",
+      "function storeTrip(string _startLocation, string _endLocation, string _distance, string _avgRPM, string _avgSpeed, string _avgEngLoad, uint256 _startTime, uint256 _endTime)",
+      "function tripCounter() view returns (uint256)",
+      "function trips(uint256) view returns (uint256 tripId, address tripOwner, string startLocation, string endLocation, string distance, string avgRPM, string avgSpeed, string avgEngLoad, uint256 startTime, uint256 endTime, uint256 timestamp)"
+    ]
+  }
+}

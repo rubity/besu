@@ -1,0 +1,2 @@
+{"timestamp":"2025-06-27T01:15:56,609","container":"fdb4e74fbdd2","level":"INFO","thread":"main","class":"Besu","message":"Starting Besu","throwable":""}
+{"timestamp":"2025-06-27T01:15:57,113","container":"fdb4e74fbdd2","level":"WARN","thread":"main","class":"Besu","message":"--min-gas-price has been ignored because --miner-enabled was not defined on the command line.","throwable":""}
